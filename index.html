@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Raksha Verma | Frontend Developer Portfolio</title>
+<meta name="description" content="Personal developer portfolio of Priyanka Roy — about, skills, tools, projects, and contact." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Fixed background: grid + glowing wave lines, visible behind every section -->
+<div class="site-bg-fx" aria-hidden="true">
+  <div class="grid-pattern"></div>
+  <svg viewBox="0 0 1400 1600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 300 C 250 220, 450 420, 700 320 S 1150 180, 1400 280" stroke="url(#gWave1)" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M0 360 C 260 280, 470 480, 720 380 S 1180 240, 1400 340" stroke="url(#gWave2)" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M0 900 C 260 820, 470 1020, 720 920 S 1180 780, 1400 880" stroke="url(#gWave1)" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M0 1300 C 260 1220, 470 1420, 720 1320 S 1180 1180, 1400 1280" stroke="url(#gWave2)" stroke-width="1" fill="none" opacity="0.3"/>
+    <defs>
+      <linearGradient id="gWave1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#7C83FD" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#7C83FD" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#7C83FD" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="gWave2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FF4F79" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#FF4F79" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#FF4F79" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <span class="glow glow-purple"></span>
+  <span class="glow glow-pink"></span>
+</div>
+
+<header class="site-header" id="header">
+  <nav class="navbar">
+    <a href="#home" class="logo">&lt; Raksha Verma /&gt;</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#tools" class="nav-link">Tools</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="eyebrow">Namasté, I'm</p>
+    <h1 class="hero-name">Raksha Verma</h1>
+
+    <span class="badge-pill">
+    <span id="typing-text"></span><span class="cursor">|</span>
+</span>
+
+    <p class="hero-desc">
+      Started with small HTML pages and messy layouts, now building
+      clean, responsive websites with HTML, CSS &amp; JavaScript —
+      and still learning something new with every project.
+    </p>
+
+    <div class="social-row">
+      <a href="https://github.com/Raksha8859" aria-label="GitHub">🐙</a>
+      <a href="https://x.com/_prettylazyy_" aria-label="X / Twitter">✕</a>
+      <a href="https://www.instagram.com/_prettylazyy_?igsh=MW5zbmlhcDRxcDZ5eA==" aria-label="Instagram">📷</a>
+      <a href="https://www.linkedin.com/in/raksha-verma-61b30937a? aria-label="LinkedIn">in</a>
+    </div>
+
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary">✉️ Contact Me</a>
+      <button id="hireMeBtn" class="btn btn-outline">View Portfolio ↗</button>
+      <a href="assets/resume.pdf" download class="btn btn-cv">📄 Download CV</a>
+    </div>
+  </div>
+
+  <!-- Soft-3D animated character replaces the profile photo -->
+  <div class="hero-visual">
+    <div class="speech-bubble" id="speechBubble">Hii! 👋</div>
+
+    <span class="doodle heart heart-1">💛</span>
+    <span class="doodle heart heart-2">💗</span>
+    <span class="doodle sparkle sparkle-1">✦</span>
+    <span class="doodle sparkle sparkle-2">✨</span>
+
+    <svg id="waveGirl" viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" aria-label="Animated soft 3D illustration of a girl with curly hair waving hello">
+      <defs>
+        <radialGradient id="bgGlow" cx="50%" cy="45%" r="60%">
+          <stop offset="0%" stop-color="#FFE9DA"/>
+          <stop offset="100%" stop-color="#FFD9C2"/>
+        </radialGradient>
+        <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#8A5A3B"/>
+          <stop offset="55%" stop-color="#6E4128"/>
+          <stop offset="100%" stop-color="#4E2C18"/>
+        </linearGradient>
+        <linearGradient id="hairHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#C98A5E" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#C98A5E" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="skinGrad" cx="42%" cy="35%" r="70%">
+          <stop offset="0%" stop-color="#FFE3C7"/>
+          <stop offset="100%" stop-color="#F5C79B"/>
+        </radialGradient>
+        <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#6B4A3A"/>
+          <stop offset="100%" stop-color="#4A2F23"/>
+        </linearGradient>
+        <radialGradient id="cheekGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FF9E85" stop-opacity="0.65"/>
+          <stop offset="100%" stop-color="#FF9E85" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <circle cx="160" cy="170" r="150" fill="url(#bgGlow)"/>
+      <ellipse cx="160" cy="345" rx="105" ry="16" fill="#6E4128" opacity="0.15"/>
+
+      <path d="M60 190 C40 130 70 55 160 45 C250 55 280 130 260 190 C270 230 262 270 240 300 L232 220 C220 260 210 290 205 320 L115 320 C110 290 100 260 88 220 L80 300 C58 270 50 230 60 190 Z" fill="url(#hairGrad)"/>
+      <path d="M70 150 C90 100 130 70 160 68 C150 90 130 110 108 140 C96 156 82 160 70 150 Z" fill="url(#hairHighlight)"/>
+
+      <path d="M105 230 C105 205 128 190 160 190 C192 190 215 205 215 230 L232 335 C234 348 224 356 210 356 L110 356 C96 356 86 348 88 335 Z" fill="url(#shirtGrad)"/>
+      <path d="M118 356 C118 340 122 320 128 300" stroke="#3A2418" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+      <circle cx="160" cy="270" r="16" fill="#8A6A54" opacity="0.5"/>
+      <path d="M150 270 l7 7 13 -14" stroke="#FFE9DA" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+      <path d="M108 234 C90 244 78 264 78 292 C78 302 90 306 96 298 C100 276 106 258 116 240 Z" fill="url(#skinGrad)"/>
+      <g transform="translate(60,270) rotate(-8)">
+        <rect x="0" y="0" width="12" height="46" rx="6" fill="url(#skinGrad)"/>
+        <rect x="16" y="-6" width="12" height="52" rx="6" fill="url(#skinGrad)"/>
+      </g>
+
+      <rect x="145" y="150" width="30" height="30" rx="12" fill="url(#skinGrad)"/>
+      <circle cx="160" cy="128" r="52" fill="url(#skinGrad)"/>
+      <circle cx="140" cy="112" r="10" fill="#fff" opacity="0.35"/>
+
+      <g fill="url(#hairGrad)">
+        <circle cx="110" cy="100" r="24"/>
+        <circle cx="124" cy="76" r="21"/>
+        <circle cx="152" cy="62" r="22"/>
+        <circle cx="182" cy="66" r="21"/>
+        <circle cx="208" cy="88" r="22"/>
+        <circle cx="102" cy="126" r="18"/>
+        <circle cx="216" cy="118" r="18"/>
+        <path d="M104 116 C100 152 108 174 120 186 C108 166 104 142 110 118 Z"/>
+        <path d="M214 114 C218 150 210 172 198 184 C210 164 214 140 208 116 Z"/>
+      </g>
+      <circle cx="130" cy="80" r="9" fill="url(#hairHighlight)"/>
+      <circle cx="176" cy="70" r="9" fill="url(#hairHighlight)"/>
+
+      <circle cx="132" cy="132" r="16" fill="url(#cheekGrad)"/>
+      <circle cx="188" cy="132" r="16" fill="url(#cheekGrad)"/>
+      <g>
+        <ellipse cx="140" cy="126" rx="7" ry="9" fill="#3A2418"/>
+        <ellipse cx="180" cy="126" rx="7" ry="9" fill="#3A2418"/>
+        <circle cx="142" cy="122" r="2.4" fill="#fff"/>
+        <circle cx="182" cy="122" r="2.4" fill="#fff"/>
+      </g>
+      <path d="M150 150 Q160 158 170 150" stroke="#B5673F" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+      <g id="waveArm" class="wave-arm" style="transform-origin: 214px 236px;">
+        <path d="M214 236 C234 228 250 206 248 178 C247 168 235 166 231 176 C229 198 220 212 206 224 Z" fill="url(#skinGrad)"/>
+        <circle cx="240" cy="172" r="13" fill="url(#skinGrad)"/>
+        <circle cx="235" cy="166" r="4" fill="#fff" opacity="0.5"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+      <section class="section" id="about">
+
+    <span class="section-badge">👩‍💻 Who Am I?</span>
+    <h2 class="section-title-script">About Me</h2>
+    <p class="section-subtitle">Turning ideas into interactive web experiences.</p>
+
+    <div class="about-grid">
+
+        <div class="about-portrait">
+            <img src="image/pic1.jpeg" alt="Raksha Verma" class="profile-photo">
+        </div>
+
+        <div class="about-copy">
+
+            <h3>Hello, I'm <span>Raksha Verma</span> 👋</h3>
+
+            <p>
+                I'm a <strong>B.Tech Computer Science</strong> student who enjoys creating
+                clean, responsive, and user-friendly websites. Every project helps me
+                improve my skills and discover better ways to solve real-world problems.
+            </p>
+
+            <p>
+                My journey started with simple HTML pages and gradually expanded into
+                CSS, JavaScript, React, Node.js, Express.js, and MongoDB. I'm passionate
+                about becoming a skilled <strong>Full Stack MERN Developer</strong>.
+            </p>
+
+            <p>
+                I enjoy transforming ideas into beautiful digital experiences while
+                writing clean, maintainable, and efficient code.
+            </p>
+
+            <div class="about-highlights">
+
+                <div class="highlight-card">
+                    <h4>🎓 Education</h4>
+                    <p>B.Tech in Computer Science Engineering</p>
+                </div>
+
+                <div class="highlight-card">
+                    <h4>💻 Focus</h4>
+                    <p>Frontend • Full Stack • MERN</p>
+                </div>
+
+                <div class="highlight-card">
+                    <h4>🚀 Currently Learning</h4>
+                    <p>DSA • React.js • Node.js • Express.js • MongoDB</p>
+                </div>
+
+                <div class="highlight-card">
+                    <h4>🎯 Goal</h4>
+                    <p>Build impactful products and become a Software Engineer.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section section-alt" id="skills">
+  <span class="section-badge">What do I know?</span>
+  <h2 class="section-title-script">Skills</h2>
+  <p class="section-subtitle">Here are some of the technologies I work with:</p>
+
+  <div class="icon-grid">
+    <div class="icon-card"><span class="icon-emoji">🧱</span><span>HTML</span></div>
+    <div class="icon-card"><span class="icon-emoji">🎨</span><span>CSS</span></div>
+    <div class="icon-card"><span class="icon-emoji">⚡</span><span>JavaScript</span></div>
+    <div class="icon-card"><span class="icon-emoji">📱</span><span>Responsive Design</span></div>
+    <div class="icon-card"><span class="icon-emoji">🅱️</span><span>Bootstrap</span></div>
+    <div class="icon-card"><span class="icon-emoji">🌿</span><span>Git</span></div>
+    <div class="icon-card"><span class="icon-emoji">🐙</span><span>GitHub</span></div>
+    <div class="icon-card"><span class="icon-emoji">🧩</span><span>Problem Solving</span></div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <span class="section-badge">What I use?</span>
+  <h2 class="section-title-script">Tools</h2>
+  <p class="section-subtitle">Tech stack known? Here are the tools I run:</p>
+
+  <div class="icon-grid">
+    <div class="icon-card"><span class="icon-emoji">🧠</span><span>Claude</span></div>
+    <div class="icon-card"><span class="icon-emoji">💻</span><span>VS Code</span></div>
+    <div class="icon-card"><span class="icon-emoji">🐙</span><span>GitHub</span></div>
+    <div class="icon-card"><span class="icon-emoji">🖌️</span><span>Canva</span></div>
+    <div class="icon-card"><span class="icon-emoji">🎯</span><span>Figma</span></div>
+    <div class="icon-card"><span class="icon-emoji">🔍</span><span>Chrome DevTools</span></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="interests">
+  <span class="section-badge">Interests</span>
+  <h2 class="section-title-script">Things I Love</h2>
+
+  <div class="interest-grid">
+    <div class="interest-card">
+      <div class="interest-icon">✏️</div>
+      <h3>Designing</h3>
+      <p>I love sketching layouts before writing a single line of code. Getting the spacing, color, and hierarchy right is half the fun.</p>
+    </div>
+    <div class="interest-card">
+      <div class="interest-icon">💻</div>
+      <h3>Building</h3>
+      <p>Turning a design into a working page is where it all clicks for me — every button, animation, and breakpoint feels like solving a puzzle.</p>
+    </div>
+    <div class="interest-card">
+      <div class="interest-icon">📚</div>
+      <h3>Learning</h3>
+      <p>New tools, new techniques, new frameworks — I like staying curious and picking up something new with every project I build.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <h2 class="section-title-script center">Projects</h2>
+
+  <div class="projects-grid">
+    <article class="project-card-v2">
+      <div class="project-card-head">
+        <div class="project-icon">🗂️</div>
+        <div>
+          <h3>Assignment Tracker</h3>
+          <span class="project-stack">HTML | CSS | JS</span>
+        </div>
+        <a href= class="visit-btn" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <p>Assignment Tracker is a task management web application that enables students and teachers to manage assignments, track deadlines, update progress, and organize academic work in one place.</p>
+      <div class="project-shot">🗂️</div>
+    </article>
+
+    <article class="project-card-v2">
+      <div class="project-card-head">
+        <div class="project-icon">📊</div>
+        <div>
+          <h3>Scamshiled</h3>
+          <span class="project-stack">APIs | React.js | Node.js+Express.js | MongoDB atlas | JWT | and many more tools</span>
+        </div>
+        <span class="status-badge">In Progress</span>
+      </div>
+      <p>ScamShield is an AI-powered cybersecurity platform that detects phishing links, scam messages, and malicious websites to help users stay safe online</p>
+      <div class="project-shot">📊</div>
+    </article>
+
+    <article class="project-card-v2">
+      <div class="project-card-head">
+        <div class="project-icon">🧮</div>
+        <div>
+          <h3>VerifyX</h3>
+          <span class="project-stack">Google gemini API | DeepFake detection model |JWT | bcrypt | and many more tools</span>
+        </div>
+        <span class="status-badge">In Progress</span>
+      </div>
+      <p>A smart video analysis platform that enables users to verify video authenticity, detect deepfakes, trace metadata, and gain trust insights with an intuitive interface</p>
+      <div class="project-shot">🧮</div>
+    </article>
+  </div>
+  <p class="edit-note">✏️ Replace these three placeholders with your real projects, screenshots and links.</p>
+</section>
+
+<section class="section section-alt" id="contact">
+  <span class="section-badge">What's next!</span>
+  <h2 class="section-title-script">Get In Touch</h2>
+  
+
+  <form id="contactForm" class="contact-form-v2" novalidate>
+    <div class="form-row">
+      <div class="form-field">
+        <input type="text" id="name" name="name" placeholder="Name *" required>
+        <span class="error-msg" id="nameError"></span>
+      </div>
+      <div class="form-field">
+        <input type="email" id="email" name="email" placeholder="Email *" required>
+        <span class="error-msg" id="emailError"></span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <input type="text" id="subject" name="subject" placeholder="Subject *">
+    </div>
+
+    <div class="form-field">
+      <textarea id="message" name="message" rows="6" placeholder="Your message *" required></textarea>
+      <span class="error-msg" id="messageError"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send Message ↗</button>
+    <p class="form-success" id="formSuccess"></p>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Raksha Verma . Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
