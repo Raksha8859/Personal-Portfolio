@@ -51,4 +51,4 @@ Personal-Portfolio/
 - Add scroll-reveal animations for section entrances
 
 ## 👩‍💻 Author
-Raksha Verma
+Raksha Verma 
